@@ -67,3 +67,14 @@ To use 24 hour time simply change the time section of `app.js` to
 // Update the Time
   currentTime.innerHTML = `${currentHour}:${currentMinute}`;
 ```
+This forks adds a search bar that visits brave search
+### Change search engine
+To change the search engine replace this variable with your preferred search engine with the query "test"
+```js
+  website = "https://search.brave.com/search?q=test&source=desktop"
+```
+If you wanted to switch to google, you would use this link
+```js
+  website = "https://www.google.com/search?q=test"
+```
+
