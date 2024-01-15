@@ -4,7 +4,7 @@
 
 /* -------------------------------------------------------- */
 
-const NAME = "Reyes";
+const NAME = "Aaroh";
 
 const CARDS = [
   {
@@ -20,47 +20,15 @@ const CARDS = [
     color: "#FF4500",
   },
   {
-    name: "Figma",
-    icon: "ri-pen-nib-fill",
-    link: "https://www.figma.com/",
-  },
-  {
     name: "Github",
     icon: "ri-github-fill",
     link: "https://github.com/",
-  },
-  {
-    name: "Twitter",
-    icon: "ri-twitter-fill",
-    link: "https://twitter.com",
-    color: "#1DA1F2",
-  },
-  {
-    name: "Dribbble",
-    icon: "ri-dribbble-fill",
-    link: "https://dribbble.com/",
-    color: "#ea4c89",
-  },
-  {
-    name: "Hashnode",
-    icon: "ri-newspaper-line",
-    link: "https://hashnode.com/",
-  },
-  {
-    name: "CodeSandbox",
-    icon: "ri-braces-fill",
-    link: "https://codesandbox.io/dashboard/",
   },
   {
     name: "YouTube",
     icon: "ri-youtube-fill",
     link: "https://www.youtube.com/",
     color: "#FF0000",
-  },
-  {
-    name: "LinkedIn",
-    icon: "ri-linkedin-fill",
-    link: "https://www.linkedin.com/",
   },
   {
     name: "Gmail",
@@ -115,9 +83,7 @@ const updateDate = () => {
   let currentYear = completeDate.getFullYear();
 
   // Update the Time
-  currentTime.innerHTML = `${
-    currentHour % 12 == 0 ? "12" : currentHour % 12
-  }:${currentMinute} ${currentHour > 11 ? "PM" : "AM"}`;
+  currentTime.innerHTML = `It is ${currentHour}:${currentMinute}`;
 
   // Update the Date
   currentDate.innerHTML = `${DAYS[currentDay]} ${currentNumber}, ${MONTHS[currentMonth]} ${currentYear}`;
@@ -228,7 +194,19 @@ const printCards = () => {
     });
   }
 };
-
+/*Search Function*/
+website = "https://search.brave.com/search?q=test&source=desktop"
+function search(website_input){
+  window.location.assign(website.replace("test", website_input))
+}
+function check(value){
+  if(value.key == "Enter"){
+    website_input = document.getElementById('Website_input').value;
+    search(website_input)
+  }
+}
+$webinput=document.getElementById("Website_input");
+$webinput.onkeypress=check;
 /****************/
 /* STARTER CODE */
 /****************/
