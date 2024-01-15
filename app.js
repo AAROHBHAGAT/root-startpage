@@ -35,6 +35,12 @@ const CARDS = [
     icon: "ri-google-fill",
     link: "https://mail.google.com/",
   },
+  {
+    name: "Wikipedia",
+    icon: "ri-book-line",
+    link: "https://en.wikipedia.org",
+    color: "#5865F2",
+  },
 ];
 
 /* -------------------------------------------------------- */
